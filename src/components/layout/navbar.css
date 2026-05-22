@@ -1,0 +1,23 @@
+.nav-link {
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  z-index: 51;
+  width: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

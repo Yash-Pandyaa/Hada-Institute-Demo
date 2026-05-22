@@ -7,6 +7,7 @@ import { gsap, ScrollTrigger } from '../../lib/gsap.js'
 import { useCartStore } from '../../stores/useCartStore.js'
 import { useAuthStore } from '../../stores/useAuthStore.js'
 import Button from '../ui/Button.jsx'
+import "./navbar.css"
 
 const links = [
   ['Home', '/'],
@@ -42,7 +43,7 @@ export default function Navbar() {
   }, [location.pathname])
 
   const navClass = ({ isActive }) => (
-    `text-sm font-medium transition ${isActive ? 'text-[var(--gold-light)]' : 'text-[var(--text-2)] hover:text-[var(--text)]'}`
+    `text-sm font-medium nav-link transition ${isActive ? 'text-[var(--gold-light)]' : 'text-[var(--text-2)] hover:text-[var(--text)]'}`
   )
 
   return (
